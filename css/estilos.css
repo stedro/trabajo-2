@@ -1,0 +1,262 @@
+/*General Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: black;
+    background: white;
+}
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: lightskyblue;
+    color: blueviolet;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:white;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: deeppink;
+}
+.burguer {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+.burguer span {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+/*Pagina principal Hero-section*/
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image: url('fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/*Seccion de tarjetas*/
+.cards-container {
+    padding: 3rem;
+    background: paleturquoise;
+    text-align: center;
+}
+.cards-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+.cards-container p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    color: rgb(231, 48, 121);
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+/*informacion del producto*/
+.contenedor{
+    display: grid;
+}
+.imagen{
+    width: 300px;
+    margin-left: 22%;
+}
+.tema{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: -270px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.texto{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: -230px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.text{
+    background-color: paleturquoise;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cuadrito{
+    text-align: center;
+    margin-left: 20%;
+    margin-top: -150px;
+}
+.cantidad{
+    margin-left: 10px;
+}
+.reserva{
+    background-color: lightskyblue;
+    margin-left: 30%;
+    width: 50%;
+    padding: 10px;
+}
+.reserva2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:black;
+}
+
+.fon{
+    background-color: paleturquoise;
+}
+.img{
+    width: 100px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+.contenedor2{
+    display: flex;
+}
+.contenido{
+    justify-content: center;
+    width: 0px;
+    margin-left: 305px;
+    margin-right: -110px;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%)rotate(360deg);
+    }
+}
+
+/*Seccion acerca de nosotros*/
+.about-section {
+    padding: 3rem;
+    text-align: center;
+    background: white;
+    color: black;
+}
+.about-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+.about-section p {
+    font-size: 1.3rem;
+}
+/*pie de pagina*/
+footer {
+    padding: 1.5rem;
+    background: #f03592;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+.flash-messages {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    width: auto;
+}
+@media (min-width: 300px) and (max-width: 600px){
+    .imagen{
+        width: 180px;
+        margin-left: 1px;
+    }
+    .tema{
+        width: 200px;
+        margin-left: 40%;
+        margin-top: -180px;
+    }
+    .texto{
+        width: 190px;
+        margin-left: 42%;
+        margin-top: -145px;
+    }
+    .cuadrito{
+        margin-left: 27%;
+        margin-top: -1px;
+    }
+    .reserva{
+        margin-left: 20%;
+        padding: 1px;
+    }
+    .img{
+        width: 78px;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+    .contenido{
+        margin-left: 20px;
+        margin-right: 65px;
+}
+}
